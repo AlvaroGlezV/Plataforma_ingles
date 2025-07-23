@@ -117,4 +117,4 @@ Say these goals at the start of the conversation and roleplay the scenario:
 Take a deep breath... You’ve got this!
 ---
 
-⛔ Do not return additional commentary or explanations. Only return the above as the value of the "spoken_prompt" key in the JSON object."""  # (todo el contenido que ya tienes) 
+⛔ Do not return additional commentary or explanations. Only return the above as the value of the "spoken_prompt" key in the JSON object."""  # (todo el contenido que ya tienes)
