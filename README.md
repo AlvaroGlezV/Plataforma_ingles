@@ -1,0 +1,1 @@
+#Code for my AI powered English platform, vibe coded some stuff, but pretty basic stuff, just APIs and some prompts for exercise generation writing, and reading are the most advanced, might switch conversational AI to cut costs, still a lot to work on
