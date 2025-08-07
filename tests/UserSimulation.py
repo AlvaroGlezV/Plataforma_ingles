@@ -1,5 +1,5 @@
 from SpeakingPromptGen import generate_prompt_response
-import InitializeConversation as ic
+import services.InitializeConversation as ic
 import json
 
 # Simulate user input

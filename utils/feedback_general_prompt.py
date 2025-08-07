@@ -28,5 +28,6 @@ def generate_feedback(Exercise: str, user_input: str, grammar_points: str,  temp
             {"role": "system", "content": feedback_prompt}
         ]
     )
-    
+    print(Exercise, user_input, grammar_points, template_path, twists)   
+
     return feedback_response.choices[0].message.content.strip()

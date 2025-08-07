@@ -12,7 +12,7 @@ load_dotenv(override=True)
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Llamar a la API para generar el ejercicio
-def generate_prompt_with_template(dynamic_block: str, template_path: str, debug: bool = False) -> dict:
+def generate_prompt_with_template(dynamic_block: str, template_path: str, debug: bool = True) -> dict:
     """
     Loads a prompt template from a file, inserts the dynamic block, and sends it to OpenAI.
 

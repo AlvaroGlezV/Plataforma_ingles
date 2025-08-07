@@ -4,7 +4,7 @@ The student is at CEFR level A2. Your task is to review their written response t
 
 ---
 
-**Exercise instructions:**
+**Exercise instructions:** (The instuctions will be made from the general guide of the exercise and a fake generated email to evaluate his skills)
 {{EXERCISE}}
 
 ---
@@ -17,7 +17,7 @@ The student is at CEFR level A2. Your task is to review their written response t
 The student was expected to demonstrate correct use of the following grammar points:
 {{GRAMMAR_POINTS}}
 
-If applicable, the student was also expected to adapt their writing based on the following unexpected changes in the situation:
+The student was also expected to adapt their writing based on the following unexpected changes in the situation:
 
 {{TWISTS}}
 
