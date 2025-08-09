@@ -1,0 +1,37 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# deps de sistema (ffmpeg para guardar wav, espeak-ng requerido por deps, MeCab mínimo)
+RUN apt-get update && apt-get install -y \
+    ffmpeg git espeak-ng \
+    mecab libmecab2 mecab-ipadic-utf8 \
+    && rm -rf /var/lib/apt/lists/*
+
+# Para que MeCab no ladre
+ENV MECABRC=/etc/mecabrc
+
+# Dependencias Python
+COPY requirements-melotts.txt .
+RUN pip install --no-cache-dir -r requirements-melotts.txt
+
+# Diccionario mínimo para que MeCab no truene (sin unidic “pesado”)
+RUN python -m unidic_lite.download
+
+# Recursos NLTK para g2p_en (inglés)
+# NLTK data (for g2p_en). Fuerza directorio y baja paquetes.
+ENV NLTK_DATA=/usr/local/nltk_data
+RUN python - <<'PY'
+import os, nltk
+os.makedirs(os.environ.get("NLTK_DATA", "/usr/local/nltk_data"), exist_ok=True)
+for pkg in ["averaged_perceptron_tagger_eng", "averaged_perceptron_tagger", "cmudict"]:
+    nltk.download(pkg, download_dir=os.environ["NLTK_DATA"])
+print("NLTK data installed to", os.environ["NLTK_DATA"])
+PY
+
+
+# Código
+COPY . .
+
+# Script por defecto (puedes sobreescribirlo desde docker compose run)
+CMD ["python", "app/controllers/listening/generate_audio.py"]

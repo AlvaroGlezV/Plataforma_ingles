@@ -2,8 +2,8 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 from typing import Optional
 
-from controllers.writing.generate_exercise import generate_writing_exercise
-from controllers.writing.feedback_generation import generate_writing_feedback
+from app.controllers.writing.generate_exercise import generate_writing_exercise
+from app.controllers.writing.feedback_generation import generate_writing_feedback
 
 router = APIRouter(prefix="/writing", tags=["writing"])
 

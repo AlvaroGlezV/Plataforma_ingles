@@ -22,3 +22,6 @@ app.include_router(reading_router)
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host=True, port=8000)  # Cambia el puerto si es necesario
+
+
+#uvicorn app.main:app --reload

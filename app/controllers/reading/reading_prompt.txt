@@ -29,7 +29,7 @@ Rules:
 }
 
 Focus the grammar used in the reading on the following skills:
-{DYNAMIC_BLOCK}
+{{DYNAMIC_BLOCK}}
 
 Make sure the questions include:
 - A mix of: wh-questions, true/false, and at least 2 multiple choice
