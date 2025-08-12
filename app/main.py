@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from app.routes.listening import router as listening_router
 
 from app.routes.writing import router as writing_router
 from app.routes.reading import router as reading_router

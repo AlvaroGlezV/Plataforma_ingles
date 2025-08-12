@@ -1,5 +1,5 @@
-from controllers.writing.generate_exercise import generate_writing_exercise
-from controllers.writing.feedback_generation import generate_writing_feedback
+from app.controllers.writing.generate_exercise import generate_writing_exercise
+from app.controllers.writing.feedback_generation import generate_writing_feedback
 
 def simulate_user_writing():
     # User input for grammar points

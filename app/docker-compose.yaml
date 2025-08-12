@@ -1,10 +1,7 @@
-version: "3.8"
-
 services:
   melotts:
     build:
       context: .
       dockerfile: Dockerfile.melotts
     volumes:
-      - .:/app
       - ./audio:/app/audio
