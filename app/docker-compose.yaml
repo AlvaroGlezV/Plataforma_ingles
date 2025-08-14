@@ -1,7 +1,0 @@
-services:
-  melotts:
-    build:
-      context: .
-      dockerfile: Dockerfile.melotts
-    volumes:
-      - ./audio:/app/audio

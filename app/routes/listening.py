@@ -1,10 +1,10 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-from controllers.listening.generate_text import generate_listening_exercise
-from controllers.listening.generate_audio import generate_audio_from_text
+from app.controllers.listening.generate_text import generate_listening_exercise
+from app.controllers.listening.generate_audio import generate_audio_from_text
 
-router = APIRouter()
+router = APIRouter(prefix="/listening", tags=["listening"])
 
 class AudioRequest(BaseModel):
     dynamic_block: str  # esto es lo que tú llamas dynamic_block en el template
